@@ -1,1 +1,0 @@
-{"name":"news-aggregator","short_name":"news-aggregator","description":"A frontend app that consumes a custom RESFul web API to display news aggregated from different nigerian news website","icons":[],"start_url":"/inshort/?standalone=true","display":"standalone","background_color":"#ffffff","theme_color":"#fff","lang":"en"}
