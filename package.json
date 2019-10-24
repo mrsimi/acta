@@ -1,14 +1,15 @@
 {
-  "name": "news-aggregator",
+  "name": "acta",
   "version": "1.0.0",
-  "description": "A frontend app that consumes a custom RESFul web API to display news aggregated from different nigerian news website",
+  "description": "news aggregation website",
   "author": "Simi",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "nuxt": "^2.0.0",
@@ -16,5 +17,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^3.0.0-0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
 }

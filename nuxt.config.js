@@ -1,6 +1,9 @@
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
+  router:{
+    base: '/acta/'
+  },
   /*
   ** Headers of the page
   */

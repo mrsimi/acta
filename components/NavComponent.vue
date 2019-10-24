@@ -5,7 +5,7 @@
     mode="horizontal"
   >
     <a-menu-item key="mail">
-      <nuxt-link to= "/" class="app-link"> Nigerian news aggregator website</nuxt-link>
+      <nuxt-link to= "/" class="app-link">acta</nuxt-link>
     </a-menu-item>
   </a-menu>
 

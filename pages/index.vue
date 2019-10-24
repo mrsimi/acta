@@ -30,36 +30,41 @@ export default{
   data(){
     return{
       news: [],
-      errors: [],
-      msg: 'Hello Vue.js! This is a message that is longer than 20 characters long.'
+      errors: []    
     }
   },
-  filters:{
-    truncate: function(value){
-      if(value.length > 20){
-        value = value.substring(0,17) +'...';
-      }
-
-      return value
-    }
-  },
+  
   methods:{
-    shuffleArr: function(array){
+    loadData:function(){
+      const URL = 'https://ngnagg.azurewebsites.net/api/ngnews';
+      this.$axios.$get(URL)
+        .then(response => {
+            this.news = response
+            this.shuffleArr(this.news)  
+            localStorage.setItem('data', JSON.stringify(this.news))
+            console.log(localStorage.getItem('data'))         
+          })
+          .catch(e => {
+            this.errors.push(e)
+            console.log(this.errors)
+          })
+    },
+    shuffleArr:function(array) {
       array.sort(() => Math.random() - 0.5);
+    },
+    dataLocalStorage:function(){
+      this.news = JSON.parse(localStorage.getItem('data'));
+      console.log(this.news)
     }
   },
-  created:function(){
-    const URL = 'https://ngnagg.azurewebsites.net/api/ngnews';
-    this.$axios.$get(URL)
-      .then(response => {
-        this.news = response
-        // console.log(this.news)
-        shuffleArr(this.news)
-        })
-        .catch(e => {
-          this.errors.push(e)
-          console.log(this.errors)
-        })
+
+  mounted:function(){
+    if(navigator.onLine){
+      this.loadData();
+    }
+    if(!navigator.onLine){
+      this.dataLocalStorage();
+    }
   }
 };
 </script>
