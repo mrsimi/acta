@@ -1,34 +1,24 @@
 <template>
-<div>
-  <a-menu
+<div class="menu">
+  <!-- <a-menu
     id ="menu"
     mode="horizontal"
+    theme="dark"
   >
-    <a-menu-item key="mail">
+    <a-menu-item>
       <nuxt-link to= "/" class="app-link">acta</nuxt-link>
     </a-menu-item>
-  </a-menu>
-
-  <!-- <nav>
-      <h2> Nigerian news aggregator website</h2>
-  </nav> -->
+  </a-menu> -->
+  <nav>
+    <h1>acta</h1>
+  </nav>
 </div>
 </template>
 
-<script>
-
-</script>
-
 <style scoped>
-
-#menu{
-    text-align: center;
-    text-transform: uppercase;
+nav{
+  text-align: center;
+  padding: 10px;
+  background-color: white;
 }
-
-/* nav{
-    text-align: center;
-    padding: 20px 5px;
-    border-bottom: 1px solid #ddd;
-} */
 </style>
