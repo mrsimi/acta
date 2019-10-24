@@ -2,15 +2,14 @@
   <div class="container">
    
     <div class="quote">
-      <!-- <p>
+      <p>
       More information is always better than less. 
       When people know the reason things are happening, even if it's bad news, 
       they can adjust their expectations and react accordingly. 
       Keeping people in the dark only serves to stir negative emotions.<br/>
       - <b>Simon Sinek</b>
-    </p> -->
-   
-    </div>
+    </p>    
+    </div> 
     
     <div v-if="isLoading" class="spin-class">
       <a-spin>
@@ -19,7 +18,7 @@
     </div>
 
     <div class="news-container"  v-if="!isLoading">
-      <a-tabs defaultActiveKey="Home" @change="callback" forceRender>
+      <a-tabs defaultActiveKey="Home" @change="callback" forceRender class="tabsmenu">
         <a-tab-pane key="Home">
            <span slot="tab">
               <a-icon type="home" />
@@ -216,7 +215,7 @@ export default{
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 50px;
+  margin: 10px 10px ;
 }
 .card-container{
   display: flex;
@@ -244,16 +243,12 @@ p{
 .quote{
   background-color: #E4D9FF;
   padding: 10px;
-  background-image: url('https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
-  background-size: cover;
-  height: 150px;
-  display: flex;
-  justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
-  .quote {
-    height: 350px;
-  }
+.tabsmenu{
+  text-align: center;
 }
+
+
+
 </style>
