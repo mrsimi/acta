@@ -24,14 +24,15 @@
               <a-icon type="home" />
                Home
           </span>
-          <div class="card-container">
+          <div>            
             <h3>Welcome to acta</h3>
-           <p class="about-item">
-             Before the invention of newspapers in the early 17th century, official government bulletins and edicts were circulated at times in some centralized empires.
-             The first documented use of an organized courier service for the diffusion of written documents is in Egypt, where Pharaohs used couriers for the diffusion of 
-             their decrees in the territory of the State (2400 BC). Julius Caesar regularly publicized his heroic deeds in Gaul, and upon becoming dictator of Rome 
-             began publishing government announcements called Acta Diurna.(Wikipedia)
-           </p>
+            <p class="about-item">
+              Before the invention of newspapers in the early 17th century, official government bulletins and edicts were circulated at times in some centralized empires.
+              The first documented use of an organized courier service for the diffusion of written documents is in Egypt, where Pharaohs used couriers for the diffusion of 
+              their decrees in the territory of the State (2400 BC). Julius Caesar regularly publicized his heroic deeds in Gaul, and upon becoming dictator of Rome 
+              began publishing government announcements called Acta Diurna.(Wikipedia)
+            </p>
+            
           </div>
         </a-tab-pane>
         <a-tab-pane key="News" >
@@ -222,6 +223,7 @@ export default{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: left;
 }
 p{
   font-size: 13px;
@@ -232,7 +234,7 @@ p{
 
 .about-item{
   text-align: left;
-  width: auto;
+  width: 60%;
   margin: auto;
 }
 .spin-class{
@@ -241,8 +243,9 @@ p{
 }
 
 .quote{
-  background-color: #E4D9FF;
+  background-color: #454545;
   padding: 10px;
+  color: #eee;
 }
 
 .tabsmenu{
